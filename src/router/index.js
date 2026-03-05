@@ -1,14 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import LandingView from "../views/LandingView.vue"
 import LoginView from '../views/LoginView.vue'
+import HomeView from "../views/HomeView.vue"
 import UserDashboard from '../views/UserDashboard.vue'
 import AdminDashboard from '../views/AdminDashboard.vue'
+import ManageBuses from "../views/ManageBuses.vue"
+import BusList from "../views/BusList.vue"
 
 const routes = [
+    {
+        path: '/',
+        name:'LandingView',
+        component: LandingView
+    },
     {
         path: '/login',
         name: 'login',
         component: LoginView
+    },
+    {
+        path:"/manage-buses",
+        component:ManageBuses
+    },
+    {
+        path: "/home",
+        name: 'home',
+        component: HomeView
     },
     {
         path: '/user-dashboard',
@@ -19,6 +37,11 @@ const routes = [
         path: '/admin-dashboard',
         name: 'admin-dashboard',
         component: AdminDashboard
+    },
+    {
+        path: "/buses",
+        name: 'buses',
+        component: BusList
     }
 ]
 
