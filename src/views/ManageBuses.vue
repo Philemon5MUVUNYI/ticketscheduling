@@ -40,27 +40,6 @@ function editBus(index){
   editIndex.value = index
 }
 
-function addBus(){
-
-  const busData = {
-    name: name.value,
-    from: from.value,
-    to: to.value,
-    price: price.value
-  }
-
-  if(editIndex.value !== null){
-    busStore.updateBus(editIndex.value, busData)
-    editIndex.value = null
-  }else{
-    busStore.addBus(busData)
-  }
-
-  name.value=""
-  from.value=""
-  to.value=""
-  price.value=""
-}
 </script>
 
 <template>
