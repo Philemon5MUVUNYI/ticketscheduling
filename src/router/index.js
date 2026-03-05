@@ -7,7 +7,7 @@ import AdminDashboard from '../views/AdminDashboard.vue'
 const routes = [
     {
         path: '/login',
-        name: 'login',
+        name: 'logi',
         component: LoginView
     },
     {
