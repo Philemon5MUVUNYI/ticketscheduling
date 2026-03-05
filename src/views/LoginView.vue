@@ -13,12 +13,12 @@ function login() {
 
   if (email.value === "admin@gmail.com" && password.value === "admin") {
     auth.login("Admin", "admin")
-    router.push("/admin-dashboard")
+    router.push("/home")
   }
 
   else if (email.value === "user@gmail.com" && password.value === "user") {
     auth.login("User", "user")
-    router.push("/user-dashboard")
+    router.push("/home")
   }
 
   else {
@@ -30,22 +30,98 @@ function login() {
 
 <template>
 
-  <h1>Bus Ticket System Login</h1>
+  <div class="login-container">
 
-  <form @submit.prevent="login">
+    <div class="login-card">
 
-    <div>
-      <label>Email</label>
-      <input type="email" v-model="email" required>
+      <h2>Login</h2>
+
+      <form @submit.prevent="login">
+
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" v-model="email" placeholder="Enter email" required>
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" v-model="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit">Login</button>
+
+      </form>
+
+      <router-link to="/">
+        <p class="home-link">Back to Home</p>
+      </router-link>
+
     </div>
 
-    <div>
-      <label>Password</label>
-      <input type="password" v-model="password" required>
-    </div>
-
-    <button type="submit">Login</button>
-
-  </form>
+  </div>
 
 </template>
+
+<style scoped>
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f8;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #42b883;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #369870;
+}
+
+.home-link {
+  text-align: center;
+  margin-top: 15px;
+  color: #42b883;
+  cursor: pointer;
+}
+
+</style>
