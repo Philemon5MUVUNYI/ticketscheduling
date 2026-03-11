@@ -1,15 +1,12 @@
 <script setup>
-
-import { useTicketStore } from "../stores/ticketStore"
+import { useTicketStore } from "@/stores/ticketStore"
 
 const ticketStore = useTicketStore()
-
 </script>
 
 <template>
 
-  <div class="container">
-
+  <div>
     <h1>My Tickets</h1>
 
     <table>
