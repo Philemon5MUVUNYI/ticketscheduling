@@ -7,6 +7,7 @@ import UserDashboard from '../views/UserDashboard.vue'
 import AdminDashboard from '../views/AdminDashboard.vue'
 import ManageBuses from "../views/ManageBuses.vue"
 import BusList from "../views/BusList.vue"
+import MyTickets from "@/views/MyTickets.vue";
 
 const routes = [
     {
@@ -42,6 +43,10 @@ const routes = [
         path: "/buses",
         name: 'buses',
         component: BusList
+    },
+    {
+        path: "/my-tickets",
+        component: MyTickets
     }
 ]
 

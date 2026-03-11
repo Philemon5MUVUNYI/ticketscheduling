@@ -4,6 +4,23 @@ import { useBusStore } from "../stores/busStore"
 
 const busStore = useBusStore()
 
+import{ useTicketStore} from "@/stores/ticketStore.js";
+
+const ticketStore = useTicketStore();
+
+function bookTicket(bus){
+
+  ticketStore.bookTicket({
+    name: bus.name,
+    from: bus.from,
+    to: bus.to,
+    price: bus.price
+  })
+
+  alert("Ticket booked successfully!")
+
+}
+
 </script>
 
 <template>
@@ -27,6 +44,21 @@ const busStore = useBusStore()
         <td>{{ bus.from }}</td>
         <td>{{ bus.to }}</td>
         <td>{{ bus.price }}</td>
+
+      </tr>
+
+      <tr v-for="(bus,index) in busStore.buses" :key="index">
+
+        <td>{{ bus.name }}</td>
+        <td>{{ bus.from }}</td>
+        <td>{{ bus.to }}</td>
+        <td>{{ bus.price }}</td>
+
+        <td>
+          <button @click="bookTicket(bus)">
+            Book Ticket
+          </button>
+        </td>
 
       </tr>
 

@@ -38,7 +38,9 @@ function logout(){
       <div class="card">
         <h3>My Tickets</h3>
         <p>Check your bookings</p>
-        <button>Open</button>
+        <router-link to="/my-tickets">
+          <button>Open</button>
+        </router-link>
       </div>
 
     </div>

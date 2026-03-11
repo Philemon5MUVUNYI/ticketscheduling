@@ -78,7 +78,8 @@ function editBus(index){
         <th>Action</th>
       </tr>
 
-      <tr v-for="(bus,index) in busStore.buses" :key="index">
+      <!--Duplication of delete-->
+      <!--<tr v-for="(bus,index) in busStore.buses" :key="index">
 
         <td>{{ bus.name }}</td>
         <td>{{ bus.from }}</td>
@@ -89,7 +90,7 @@ function editBus(index){
           <button @click="busStore.deleteBus(index)">Delete</button>
         </td>
 
-      </tr>
+      </tr>-->
 
       <tr v-for="(bus,index) in busStore.buses" :key="index">
 
