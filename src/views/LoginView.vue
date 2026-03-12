@@ -53,7 +53,7 @@ function login() {
       </form>
 
       <router-link to="/">
-        <p class="home-link">Back to Home</p>
+        <p class="home-link">Back to landing page</p>
       </router-link>
 
     </div>
@@ -120,8 +120,11 @@ button:hover {
 .home-link {
   text-align: center;
   margin-top: 15px;
-  color: #42b883;
+  color: #10014d;
   cursor: pointer;
 }
 
+.home-link:hover{
+  color : red;
+}
 </style>

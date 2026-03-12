@@ -120,7 +120,7 @@ function downloadPDF(){
 
 .footer{
   text-align:center;
-  margin-top:80px;
+  margin-top:300px;
   padding:20px;
   background: #292930;
   color: #fbfff9;
