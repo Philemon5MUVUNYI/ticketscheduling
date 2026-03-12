@@ -52,7 +52,7 @@ function editBus(index){
 
     <form @submit.prevent="addBus">
 
-      <input v-model="name" placeholder="Bus Name" required>
+      <input v-model="name" placeholder="Plate number" required>
 
       <input v-model="from" placeholder="From City" required>
 
