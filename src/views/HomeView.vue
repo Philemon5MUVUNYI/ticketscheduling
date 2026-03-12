@@ -62,6 +62,13 @@ const auth = useAuthStore()
 
   </div>
 
+  <footer class="footer">
+
+    <p>© 2026 Bus Ticket Scheduling System</p>
+    <p>Designed for easy and fast bus booking.</p>
+
+  </footer>
+
 </template>
 
 <style scoped>
@@ -135,4 +142,11 @@ const auth = useAuthStore()
   color:#666;
 }
 
+.footer{
+  text-align:center;
+  margin-top:80px;
+  padding:20px;
+  background: #292930;
+  color: #fbfff9;
+}
 </style>
