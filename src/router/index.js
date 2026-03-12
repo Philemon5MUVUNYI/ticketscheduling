@@ -8,6 +8,7 @@ import AdminDashboard from '../views/AdminDashboard.vue'
 import ManageBuses from "../views/ManageBuses.vue"
 import BusList from "../views/BusList.vue"
 import MyTickets from "@/views/MyTickets.vue";
+import AdminBookings from "@/views/AdminBookings.vue"
 
 const routes = [
     {
@@ -46,7 +47,13 @@ const routes = [
     },
     {
         path: "/my-tickets",
+        name: 'tickets',
         component: MyTickets
+    },
+    {
+        path: "/admin-bookings",
+        name: 'bookings',
+        component: AdminBookings
     }
 ]
 
