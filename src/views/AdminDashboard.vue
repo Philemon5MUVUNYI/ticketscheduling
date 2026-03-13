@@ -165,15 +165,15 @@ function logout(){
   border-radius:8px;
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
-.admin-dashboard{
+/*.admin-dashboard{
   min-height:100vh;
   background-image: url("@/assets/bus3.jpg");
   background-size: cover;
   background-position: center;
   padding: 40px;
   text-align:center;
-}
-.admin-dashboard{
+}*/
+/*.admin-dashboard{
   min-height:100vh;
   background-image: url("@/assets/bus3.jpg");
   background-size: cover;
@@ -181,7 +181,7 @@ function logout(){
   padding:40px;
   text-align:center;
   position:relative;
-}
+}*/
 
 .admin-dashboard::before{
   content:"";
