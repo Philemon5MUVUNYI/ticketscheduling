@@ -21,15 +21,25 @@ function logout(){
 
     <div class="links">
 
-      <router-link to="/home">Home</router-link>
-
+      <router-link v-if="auth.role === 'user'" to="/home">
+        Home
+      </router-link>
       <router-link v-if="auth.role === 'admin'" to="/admin-dashboard">
         Dashboard
       </router-link>
-
+      <router-link v-if="auth.role === 'admin'" to="/admin-bookings">
+        Bookings
+      </router-link>
       <router-link v-if="auth.role === 'user'" to="/user-dashboard">
         Dashboard
       </router-link>
+      <router-link v-if="auth.role === 'user'" to="/buses">
+        Available buses
+      </router-link>
+      <router-link v-if="auth.role === 'user'" to="/my-tickets">
+        My tickets
+      </router-link>
+
 
       <button @click="logout">Logout</button>
 

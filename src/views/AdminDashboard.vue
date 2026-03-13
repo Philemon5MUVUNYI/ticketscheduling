@@ -15,6 +15,32 @@ function logout(){
 </script>
 
 <template>
+  <!--<section >
+    <div class="admin-dashboard">
+
+      <h1>Admin Dashboard</h1>
+      <p>Welcome Admin</p>
+
+      <div class="cards">
+
+        <div class="card">
+          <img src="@/assets/images/bus1.jpg">
+          <h3>Manage Buses</h3>
+          <p>Add, edit or remove buses</p>
+          <button>Open</button>
+        </div>
+
+        <div class="card">
+          <img src="@/assets/images/bus2.jpg">
+          <h3>View Bookings</h3>
+          <p>Check all booked tickets</p>
+          <button>Open</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>-->
 
   <div class="dashboard">
 
@@ -22,9 +48,10 @@ function logout(){
 
     <p>Welcome {{ auth.user }}</p>
 
-    <div class="cards">
+    <div class="route-grid">
 
-      <div class="card">
+      <div class="route-card">
+        <img src="../assets/images/bus5.jpg">
         <h3>Manage Buses</h3>
         <p>Add, edit or remove buses</p>
         <router-link to="/manage-buses">
@@ -32,13 +59,15 @@ function logout(){
         </router-link>
       </div>
 
-      <div class="card">
+      <!--<div class="route-card">
+        <img src="../assets/images/bus6.jpg">
         <h3>Manage Schedules</h3>
         <p>Create and update bus schedules</p>
         <button>Open</button>
-      </div>
+      </div>-->
 
-      <div class="card">
+      <div class="route-card">
+        <img src="../assets/images/bus8.jpg">
         <h3>View Bookings</h3>
         <p>Check all booked tickets</p>
         <router-link to="/admin-bookings">
@@ -75,6 +104,7 @@ function logout(){
     </div>
 
   </section>
+
 
   <section class="cta">
 
@@ -130,10 +160,45 @@ function logout(){
 
 .card{
   border:1px solid #ddd;
-  padding:20px;
-  width:200px;
+  padding:2px;
+  width:5px;
   border-radius:8px;
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+.admin-dashboard{
+  min-height:100vh;
+  background-image: url("@/assets/bus3.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  text-align:center;
+}
+.admin-dashboard{
+  min-height:100vh;
+  background-image: url("@/assets/bus3.jpg");
+  background-size: cover;
+  background-position: center;
+  padding:40px;
+  text-align:center;
+  position:relative;
+}
+
+.admin-dashboard::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+}
+
+.admin-dashboard > *{
+  position:relative;
+  color:white;
+}
+.admin-dashboard::before{
+  backdrop-filter: blur(3px);
 }
 
 .card button{

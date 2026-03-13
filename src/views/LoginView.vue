@@ -13,7 +13,7 @@ function login() {
 
   if (email.value === "admin@gmail.com" && password.value === "admin") {
     auth.login("Admin", "admin")
-    router.push("/home")
+    router.push("admin-dashboard")
   }
 
   else if (email.value === "user@gmail.com" && password.value === "user") {
